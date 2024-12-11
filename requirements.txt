@@ -1,0 +1,4 @@
+binance==0.3
+pandas==2.0.3
+requests==2.32.3
+python-decouple==3.8
