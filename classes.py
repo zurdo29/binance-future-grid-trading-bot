@@ -6,7 +6,6 @@ import time
 
 api = config("API")
 api_secret = config("API_SECRET")
-
 client = Client(api,api_secret,tld="com",testnet=True)
 
 class Bot:
@@ -180,7 +179,9 @@ class Bot:
                     except:
                         pass
 
+                    # Asegúrate de reemplazar estos datos con los correctos según la documentación de la biblioteca
                     y = client.futures_position_information(symbol=self.symbol)
+
                     df2 = pd.DataFrame(y)
                     df2 = df2.loc[df2["positionAmt"] != "0.000"]
                     if len(df2) == 0:
